@@ -1,7 +1,7 @@
 @extends('layout.base')
 
 @section('base')
-<div class="row position-absolute top-50 start-50 translate-middle rounded" style="background-color: #e3f2fd; box-shadow: 2px 2px 4px #198754; padding:20px;">
+<div class="row position-absolute top-50 start-50 translate-middle rounded" style="background-color: #e3f2fd; box-shadow: 2px 2px 4px #198754;">
     <div class="col d-flex justify-content-center">
         <main class="form-signin">
             <form>
@@ -31,7 +31,7 @@
               </div>
               <button class="w-100 btn btn-lg btn-success" type="submit">Login</button>
             </form>
-            <small class="d-block text-center mt-2">Not Register ?<a href="/register"> Register Now!</a></small>
+            <small class="d-block text-center mt-2">Not Register? <a href="/register">Register Now!</a></small>
         </main>
     </div>
 </div>

@@ -11,7 +11,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link active" aria-current="page" href="/">Dashboard</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
@@ -32,7 +32,7 @@
           </li>
         </ul>
         <form class="d-flex mb-3 mt-3" role="search">
-          <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="border-top-right-radius: 0px; border-bottom-right-radius:0px; width: 800px">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="border-top-right-radius: 0px; border-bottom-right-radius:0px; width: 800px; display:flex">
           <button class="btn btn-outline-success" type="submit" style="border-top-left-radius: 0px; border-bottom-left-radius:0px;">Search</button>
         </form>
         <div class="d-flex justify-content-center ms-auto column-gap-2">
