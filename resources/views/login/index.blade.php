@@ -1,10 +1,24 @@
 @extends('layout.base')
 
 @section('base')
+@if (session()->has('success'))
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{ session('success') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
+@if (session()->has('loginError'))
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {{ session('loginError') }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>  
+@endif
 <div class="row position-absolute top-50 start-50 translate-middle rounded" style="background-color: #e3f2fd; box-shadow: 2px 2px 4px #198754;">
     <div class="col d-flex justify-content-center">
         <main class="form-signin">
-            <form>
+            <form action="/login" method="post">
+              @csrf
                 <div class="text-center mb-4">
                     <a href="/">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="96" height="96" viewBox="0 0 32 32">
@@ -16,12 +30,22 @@
               <h1 class="h3 mb-3 fw-normal text-center">Login</h1>
           
               <div class="form-floating mb-2">
-                <input type="email" class="form-control rounded" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
+                <input type="email" name="email" class="form-control rounded @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" autofocus required value="{{ old('email') }}">
+                <label for="email">Email address</label>
+                @error('email')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
               </div>
               <div class="form-floating">
-                <input type="password" class="form-control rounded" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Password</label>
+                <input type="password" name="password" class="form-control rounded @error('password') is-invalid @enderror" id="password" placeholder="Password" required>
+                <label for="password">Password</label>
+                @error('password')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
               </div>
           
               <div class="checkbox mb-3">

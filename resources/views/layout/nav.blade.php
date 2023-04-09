@@ -35,10 +35,37 @@
           <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="border-top-right-radius: 0px; border-bottom-right-radius:0px; width: 800px; display:flex">
           <button class="btn btn-outline-success" type="submit" style="border-top-left-radius: 0px; border-bottom-left-radius:0px;">Search</button>
         </form>
+        <ul class="navbar-nav ms-auto">
+          @auth
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ auth()->user()->name }}
+              @include('componen.user-icon')
+            </a>
+            <ul class="dropdown-menu p-4">
+              <li>
+                @include('componen.profile-icon')
+                <a class="dropdown-item d-inline" href="#">Profile</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <form action="/logout" method="post">
+                  @csrf
+                  <button type="submit" class="dropdown-item">
+                    @include('componen.logout-icon')
+                    Logout
+                  </button>
+                </form>
+              </li>
+            </ul>
+          </li>  
+          @else
+        </ul>
         <div class="d-flex justify-content-center ms-auto column-gap-2">
             <a class="btn btn-outline-success" href="/login" role="button">Login</a>
             <a class="btn btn-success" href="/register" role="button">Register</a>
         </div>
+        @endauth
       </div>
     </div>
 </nav>
