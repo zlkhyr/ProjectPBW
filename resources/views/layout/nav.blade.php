@@ -44,8 +44,10 @@
             </a>
             <ul class="dropdown-menu p-4">
               <li>
-                @include('componen.profile-icon')
-                <a class="dropdown-item d-inline" href="#">Profile</a>
+                <button type="submit" class="dropdown-item">
+                  @include('componen.profile-icon')
+                  Profile
+                </button>
               </li>
               <li><hr class="dropdown-divider"></li>
               <li>
