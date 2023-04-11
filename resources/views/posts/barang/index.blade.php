@@ -1,0 +1,37 @@
+@extends('layout.base')
+
+@section('base')
+@if (session()->has('success'))
+    <div class="alert alert-success alert-dismissible fade show">
+      {{ session('success') }}
+    </div>
+@endif
+<a href="/posts/barang/create" class="btn btn-success mb-4">Tambah</a>
+<div class="table-responsive text-center">
+    <table class="table table-sm" style="background-color: #e3f2fd; border-radius:5px; ">
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">Barang</th>
+          <th scope="col">Gambar</th>
+          <th scope="col">Harga</th>
+          <th scope="col">Stok</th>
+          <th scope="col">Peminjam</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach ($post as $barang)
+        <tr>
+            <td>{{ $loop->iteration }}</td>
+            <td>{{ $barang->barang }}</td>
+            <td>
+                <img class="rounded mx-auto d-block" src="{{ asset('storage/'. $barang->Foto) }}" alt="{{ $barang->Foto }}" width="200" height="200">
+            </td>
+            <td>{{ $barang->harga }}</td>
+            <td>{{ $barang->stock }}</td>
+        </tr>
+        @endforeach
+      </tbody>
+    </table>
+  </div>
+@endsection
