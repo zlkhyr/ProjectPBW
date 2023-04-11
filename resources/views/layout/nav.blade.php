@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd; box-shadow: 2px 2px 4px #198754; position: relative; z-index: 999">
+<nav class="navbar navbar-expand-xl" style=" width:100%; background-color: #e3f2fd; box-shadow: 2px 2px 4px #198754; position:relative; z-index: 999">
     <div class="container-fluid mx-4">
       <a href="/">
          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="52" height="52" viewBox="0 0 32 32">
@@ -48,6 +48,12 @@
                   @include('componen.profile-icon')
                   Profile
                 </button>
+              </li>
+              <li>
+                <a class="nav-link" href="/posts/barang">
+                  @include('componen.profile-icon')
+                  Barang saya
+                </a>
               </li>
               <li><hr class="dropdown-divider"></li>
               <li>
