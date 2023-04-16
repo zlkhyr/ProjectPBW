@@ -22,3 +22,12 @@
   .form-registration input{
     width: 500px;
   }
+
+  #menu-card{
+    transition: transform 0.3s;
+  }
+
+  #menu-card:hover {
+    transform: scale(1.1); 
+    cursor: pointer;
+  }

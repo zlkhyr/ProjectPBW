@@ -2,8 +2,9 @@
 
 @section('base')
 @if (session()->has('success'))
-    <div class="alert alert-success alert-dismissible fade show">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
       {{ session('success') }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 @endif
 <a href="/posts/barang/create" class="btn btn-success mb-4">Tambah</a>
@@ -25,7 +26,7 @@
             <td>{{ $loop->iteration }}</td>
             <td>{{ $barang->barang }}</td>
             <td>
-                <img class="rounded mx-auto d-block" src="{{ asset('storage/'. $barang->Foto) }}" alt="{{ $barang->Foto }}" width="200" height="200">
+                <img class="img-fluid rounded mx-auto d-block" src="{{ asset('storage/'. $barang->Foto) }}" alt="{{ $barang->Foto }}" width="200" height="200">
             </td>
             <td>{{ $barang->harga }}</td>
             <td>{{ $barang->stock }}</td>
