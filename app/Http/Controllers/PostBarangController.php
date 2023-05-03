@@ -15,6 +15,7 @@ class PostBarangController extends Controller
     public function index()
     { 
         return view('posts.barang.index',[
+            'halaman' => 'mybarang',
             'post' => Barang::where('user_id', auth()->user()->id)->get()
         ]);
     }
