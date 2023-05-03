@@ -10,10 +10,11 @@
           <label for="barang" class="form-label">Barang</label>
           <input type="text" class="form-control" id="barang" name="barang">
         </div>
-        <div class="mb-3" style="width: 300px;">
+        <div class="mb-3" style="width: 500px;">
           <label for="foto-barang" class="form-label">Foto barang</label>
-          <input class="form-control" type="file" id="foto-barang" name="foto-barang">
+          <input class="form-control" type="file" id="foto-barang" name="foto-barang" onchange="loadFile(event)">
         </div>
+        <div id="preview" style="display:inline-block"></div>
         <div class="mb-3">
           <label for="harga" class="form-label">Harga</label>
           <input type="text" class="form-control" id="harga" name="harga">
@@ -32,5 +33,16 @@
     </form>
   </div>
 </div>
-
+<script>
+  function loadFile(event){
+    var imgPreview = URL.createObjectURL(event.target.files[0]);
+    var preview = document.getElementById('preview');
+    var img = document.createElement('img');
+    preview.innerHTML = '';
+    img.src = imgPreview;
+    img.width = "300";
+    preview.appendChild(img);
+  }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 @endsection
