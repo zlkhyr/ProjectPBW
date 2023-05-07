@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-xl" style=" width:100%; background-color: #e3f2fd; box-shadow: 2px 2px 4px #198754; position:relative; z-index: 999">
     <div class="container-fluid mx-4">
       @include('componen.web-icon')
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         @include('componen.nav-menu')
         @include('componen.search')
