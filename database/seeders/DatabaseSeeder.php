@@ -30,21 +30,5 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt(235711)
         ]);
 
-
-        Barang::create([
-            'user_id' => 1,
-            'barang' => 'buku',
-            'foto' => 'path/ke/foto',
-            'harga' => '10.000/minggu',
-            'stock' => 5
-        ]);
-
-        Barang::create([
-            'user_id' => 1,
-            'barang' => 'kamera',
-            'foto' => 'path/ke/foto',
-            'harga' => '200.000/minggu',
-            'stock' => 3
-        ]);
     }
 }

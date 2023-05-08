@@ -12,7 +12,7 @@
               <img class="img-fluid" src="{{ asset('storage/'. $item->Foto) }}" alt="{{ $item->Foto }}" style="width:200px; height:200px;">
               <div class="card-body text-start" style="border-top: 2px solid black; width:100%;">
                 <p class="card-text"><h4>{{ $item->barang }}</h4></p>
-                <p class="card-text"><h5>{{ $item->harga }}</h5></p>
+                <p class="card-text"><h5>Rp.{{ $item->harga }}/hari</h5></p>
               </div>
             </div>
           </div>

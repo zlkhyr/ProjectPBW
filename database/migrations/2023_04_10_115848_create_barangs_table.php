@@ -18,8 +18,8 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->string('barang');
             $table->string('Foto');
-            $table->string('harga');
-            $table->string('stock');
+            $table->decimal('harga', 10, 0);
+            $table->decimal('stock', 10, 0);
             $table->timestamps();
         });
     }
