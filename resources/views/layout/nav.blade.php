@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-xl" style=" width:100%; background-color: #e3f2fd; box-shadow: 2px 2px 4px #198754; position:relative; z-index: 999">
+<nav class="navbar navbar-expand-xl" style=" width:100%; background-color: #e3f2fd; box-shadow: 2px 0px 4px #198754; position:fixed; z-index: 9999; top:0">
     <div class="container-fluid mx-4">
       @include('componen.web-icon')
-      <h2 class="namaWeb">Pinjam.com</h2>
+      <a href="/" class="navbar-brand" style="font-size: 30px">Pinjam.com</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
