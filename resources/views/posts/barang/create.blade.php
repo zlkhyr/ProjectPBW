@@ -29,11 +29,11 @@
         <div class="mb-3">
           <label for="stock" class="form-label d-block">Stock</label>
           <span class="input-group-btn d-inline">
-            <button type="button" class="btn btn-success" onclick="decrementS()">-</button>
+            <button type="button" class="btn btn-success" onclick="decrementS('stock')">-</button>
           </span>
           <input type="number" class="form-control d-inline" id="stock" name="stock" step="1" min="1" value="1" style="width:200px; text-align:center;">
           <span class="input-group-btn d-inline">
-            <button type="button" class="btn btn-success" onclick="incrementS()">+</button>
+            <button type="button" class="btn btn-success" onclick="incrementS('stock')">+</button>
           </span>
         </div>
         <div class="mb-3">
@@ -46,43 +46,6 @@
     </form>
   </div>
 </div>
-<script>
-  function loadFile(event){
-    var imgPreview = URL.createObjectURL(event.target.files[0]);
-    var preview = document.getElementById('preview');
-    var img = document.createElement('img');
-    preview.innerHTML = '';
-    img.src = imgPreview;
-    img.width = "300";
-    preview.appendChild(img);
-  }
-  function incrementS() {
-    var input = document.getElementById('stock');
-    input.value = parseInt(input.value) + 1;
-  }
-  
-  function decrementS() {
-    var input = document.getElementById('stock');
-    if (input.value <= 1) {
-      input.value = 1;
-    }else{
-      input.value = parseInt(input.value) - 1;
-    }
-  }
-  function incrementH() {
-    var input = document.getElementById('harga');
-    input.value = parseInt(input.value) + 500;
-  }
-  
-  function decrementH() {
-    var input = document.getElementById('harga');
-    if (input.value < 1) {
-      input.value = 0;
-    }else{
-      input.value = parseInt(input.value) - 500;
-    }
-  }
-</script>
 <style>
   input[type=number]::-webkit-outer-spin-button,
   input[type=number]::-webkit-inner-spin-button {

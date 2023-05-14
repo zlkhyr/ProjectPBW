@@ -12,7 +12,7 @@
                 <p>{{ $barang->deskripsi }}</p>
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-success me-md-2" type="button" style="width:100px">Pinjam</button>
+                <a href="{{ url('pinjam', $barang->id) }}" class="btn btn-success me-md-2" type="button" style="width:100px">Pinjam</a>
             </div>
         </div>
     </div>
