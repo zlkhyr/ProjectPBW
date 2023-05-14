@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('Foto');
             $table->decimal('harga', 10, 0);
             $table->decimal('stock', 10, 0);
+            $table->text('deskripsi');
             $table->timestamps();
         });
     }

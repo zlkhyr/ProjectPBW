@@ -20,6 +20,7 @@ class Barang extends Model
         'stock',
         'user_id',
         'Foto',
+        'deskripsi'
     ];
 
     public function user()

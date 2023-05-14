@@ -40,9 +40,10 @@ class PostBarangController extends Controller
     {
         $validatedData = $request->validate([
             'barang' => ['required', 'max:255'],
-            'harga' => ['required', 'max:255'],
+            'harga' => ['required'],
             'Foto' => ['image','file','max:1024'],
             'stock' => ['required'],
+            'deskripsi' => ['required'],
         ]);
         
         $validatedData['Foto'] = $request->file('foto-barang')->store('foto-barang');

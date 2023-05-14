@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PostBarangController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\detailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,5 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::resource('/posts/barang', PostBarangController::class)->middleware('auth');
+
+Route::get('/detail/{id}', [detailController::class, 'index']);
