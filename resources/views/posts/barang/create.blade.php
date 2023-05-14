@@ -36,10 +36,10 @@
             <button type="button" class="btn btn-success" onclick="incrementS()">+</button>
           </span>
         </div>
-        {{-- <div class="mb-3">
+        <div class="mb-3">
           <label for="deskripsi" class="form-label">Deskripsi</label>
-          <textarea class="form-control" id="deskripsi" rows="5"></textarea>
-        </div> --}}
+          <textarea class="form-control" id="deskripsi" name="deskripsi" rows="5"></textarea>
+        </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
           <button type="submit" class="btn btn-success">Submit</button>
         </div>
