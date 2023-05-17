@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-
-use App\Models\Barang;
 use Illuminate\Http\Request;
+use App\Models\Barang;
+use App\Models\Pinjam;
 
-class pinjamController extends Controller
+class PinjamController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,9 @@ class pinjamController extends Controller
      */
     public function index($id)
     {
-        $barang=Barang::find($id);
-        return view('pinjam.index', compact('barang'));
+        return view('pinjam.index',[
+            'barang'=>Barang::find($id)
+        ]);
     }
 
     /**
@@ -26,7 +27,7 @@ class pinjamController extends Controller
      */
     public function create()
     {
-        return view('pinjam.index');
+        return view('pinjam.create');
     }
 
     /**
@@ -36,8 +37,20 @@ class pinjamController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {   
+        // dd($request->all());
+        // $validatedData = $request->validate([
+        //     'jumlahpinjaman' => ['required'],
+        //     'lamapinjam' => ['required'],
+        //     'deadline' => ['required'],
+        // ]);
+
+        $request['id_peminjam'] = auth()->user()->id;
+        $request['nama_peminjam'] = auth()->user()->name;
+        
+        Pinjam::create($request->except("_token"));
+
+        return redirect('/');
     }
 
     /**

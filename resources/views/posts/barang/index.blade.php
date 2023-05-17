@@ -7,7 +7,7 @@
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 @endif
-<a href="/posts/barang/create" class="btn btn-success mb-4">Tambah</a>
+<a href="/posts/barang/create" class="btn btn-success mb-4 mt-4">Tambah</a>
 <div class="table-responsive text-center">
     <table class="table table-sm" style="background-color: #e3f2fd; border-radius:5px; ">
       <thead>

@@ -5,8 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PostBarangController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\detailController;
-use App\Http\Controllers\pinjamController;
+use App\Http\Controllers\PinjamController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +33,4 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::resource('/posts/barang', PostBarangController::class)->middleware('auth');
-
-Route::get('/detail/{id}', [detailController::class, 'index']);
-Route::resource('/pinjam/{id}', pinjamController::class)->middleware('auth');
+Route::resource('/pinjam/{id}', PinjamController::class);

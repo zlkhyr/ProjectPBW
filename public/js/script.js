@@ -34,3 +34,21 @@
       input.value = parseInt(input.value) - 500;
     }
   }
+
+  function calculateDate() {
+    var inputNumber = document.getElementById("lamapinjam").value;
+  
+    if (inputNumber !== "") {
+      var currentDate = new Date();
+      currentDate.setDate(currentDate.getDate() + parseInt(inputNumber));
+  
+      var year = currentDate.getFullYear();
+      var month = String(currentDate.getMonth() + 1).padStart(2, "0");
+      var day = String(currentDate.getDate()).padStart(2, "0");
+  
+      var formattedDate = year + "-" + month + "-" + day;
+      document.getElementById("deadline").value = formattedDate;
+    } else {
+      document.getElementById("deadline").value = "";
+    }
+  }

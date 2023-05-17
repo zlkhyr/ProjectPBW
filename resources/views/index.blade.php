@@ -14,7 +14,7 @@
                 <p class="card-text"><h4>{{ $barang->barang }}</h4></p>
                 <p class="card-text"><h5>Rp.{{ $barang->harga }}/hari</h5></p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                  <a href="{{ url('detail', $barang->id) }}" class="btn btn-link">Lihat ></a>
+                  <a href="{{ url('pinjam', $barang->id) }}" class="btn btn-link">Lihat ></a>
                 </div>
               </div>
             </div>
