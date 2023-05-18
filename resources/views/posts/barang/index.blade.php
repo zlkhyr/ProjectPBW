@@ -18,6 +18,7 @@
           <th scope="col">Harga</th>
           <th scope="col">Stok</th>
           <th scope="col">Peminjam</th>
+          <th scope="col">operasi</th>
         </tr>
       </thead>
       <tbody>
@@ -30,9 +31,24 @@
             </td>
             <td>{{ $barang->harga }}</td>
             <td>{{ $barang->stock }}</td>
+            <th></th>
+            <td>
+              <form action="/posts/barang" method="POST">
+              @method('delete')
+              @csrf
+              <button class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus barang ?')">
+                Hapus
+              </button>
+              </form>
+            </td>
         </tr>
         @endforeach
       </tbody>
     </table>
 </div>
+<style>
+  td{
+    vertical-align: middle;"
+  }
+</style>
 @endsection

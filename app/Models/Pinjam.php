@@ -20,6 +20,10 @@ class Pinjam extends Model
         'jumlahpinjam',
         'lamapinjam',
         'deadline',
+        'id_barang',
+        'nama_barang',
+        'foto_barang',
+        'id_pemilik'
     ];
 
     public function barang()
