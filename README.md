@@ -1,7 +1,17 @@
-<p align="center">
-    #Pinjam.com
-</p>
+# Pinjam.com
 
+
+## About Pinjam.com
+
+Pinjam.com adalah web yang menyediakan platform membagikan atau meminjam barang antara sesama user dimana harga peminjaman perharinya ditentukan oleh user yang meminjamkan.
+user yang meminjam barang akan memiliki batas waktu atau deadline untuk mengembalikan barang yang ia pinjam dengan begitu orang yang meminjamkan barang tidak kehilangan barangnya dan orang yang meminjam tidak lupa mengembalikan barang yang ia pinjam
+
+### Kelompok
+
+- **[Zul AKhyar|2008107010080](https://github.com/zlkhyr)**
+- **[Teuku Tamam Al Fatah|2008107010071](https://tighten.co)**
+
+## Framework
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -11,22 +21,4 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-### Kelompok
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**

@@ -17,7 +17,6 @@
           <th scope="col">Gambar</th>
           <th scope="col">Harga</th>
           <th scope="col">Stok</th>
-          <th scope="col">Peminjam</th>
           <th scope="col">operasi</th>
         </tr>
       </thead>
@@ -31,7 +30,6 @@
             </td>
             <td>{{ $barang->harga }}</td>
             <td>{{ $barang->stock }}</td>
-            <th></th>
             <td>
               <form action="/posts/barang" method="POST">
               @method('delete')
