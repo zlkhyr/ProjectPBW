@@ -42,6 +42,12 @@
                     <label for="deadline" class="form-label d-block">deadline</label>
                     <input type="date" class="form-control rounded" id="deadline" name="deadline" readonly style="width:200px; border:2px solid black; text-align:center; display:inline-block">
                 </div>
+                <div style="display:none">
+                    <input type="text" id="id_barang" name="id_barang" value="{{ $barang->id }}">
+                    <input type="text" id="nama_barang" name="nama_barang" value="{{ $barang->barang }}">
+                    <input type="text" id="foto_barang" name="foto_barang" value="{{ $barang->Foto }}">
+                    <input type="text" id="id_pemilik" name="id_pemilik" value="{{ $barang->user_id }}">
+                </div>
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <button type="submit" class="btn btn-success me-md-2" id="pinjam" style="width:100px">Pinjam</button>

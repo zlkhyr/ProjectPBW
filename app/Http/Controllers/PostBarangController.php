@@ -27,7 +27,9 @@ class PostBarangController extends Controller
      */
     public function create()
     {
-        return view('posts.barang.create');
+        return view('posts.barang.create',[
+            'halaman' => 'mybarang'
+        ]);
     }
 
     /**
@@ -97,6 +99,8 @@ class PostBarangController extends Controller
      */
     public function destroy(Barang $barang)
     {
-        //
+        Barang::destroy($barang->id);
+
+        return redirect('/posts/barang')->with('success','Barang dihapus!');
     }
 }

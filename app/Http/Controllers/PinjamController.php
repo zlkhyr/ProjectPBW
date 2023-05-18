@@ -16,6 +16,7 @@ class PinjamController extends Controller
     public function index($id)
     {
         return view('pinjam.index',[
+            'halaman'=>'dashboard',
             'barang'=>Barang::find($id)
         ]);
     }
@@ -50,7 +51,7 @@ class PinjamController extends Controller
         
         Pinjam::create($request->except("_token"));
 
-        return redirect('/');
+        return redirect('/myborrowing');
     }
 
     /**
