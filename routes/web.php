@@ -37,4 +37,4 @@ Route::resource('/posts/barang', PostBarangController::class)->middleware('auth'
 
 Route::get('/myborrowing', [MypinjamController::class, 'index']);
 
-Route::resource('/pinjam/{id}', PinjamController::class);
+Route::resource('/pinjam/{id}', PinjamController::class)->middleware('login');
